@@ -1,0 +1,71 @@
+<div class="container">
+    <h1 class="mb-2">Products</h1>
+        <table class="table" *ngIf="products && products.length>0">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>CategoryName</th>
+                    <th>UnitName</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>ProductBarcode</th>
+                    <th>Description</th>
+                    <th>BrandName</th>
+                    <th>SizeName</th>
+                    <th>ColorName</th>
+                    <th>ModelName</th>
+                    <th>VariantName</th>
+                    <th>OldPrice</th>
+                    <th>Price</th>
+                    <th>CostPrice</th>
+                    <th>WarehouseList</th>
+                    <th>stock</th>
+                    <th>TotalPurchase</th>
+                    <th>LastPurchaseDate</th>
+                    <th>LastPurchaseSupplier</th>
+                    <th>TotalSales</th>
+                    <th>LastSalesDate</th>
+                    <th>LastSalesCustomer</th>
+                    <th>ImagePath</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let product of products">
+                    <td>{{product.Id}}</td>
+                    <td>{{product.CategoryName}}</td>
+                    <td>{{product.UnitName}}</td>
+                    <td>{{product.Name}}</td>
+                    <td>{{product.Code}}</td>
+                    <td>{{product.ProductBarcode}}</td>
+                    <td>{{product.Description}}</td>
+                    <td>{{product.BrandName}}</td>
+                    <td>{{product.SizeName}}</td>
+                    <td>{{product.ColorName}}</td>
+                    <td>{{product.ModelName}}</td>
+                    <td>{{product.VariantName}}</td>
+                    <td>{{product.OldPrice}}</td>
+                    <td>{{product.Price}}</td>
+                    <td>{{product.CostPrice}}</td>
+                    <td>{{product.WarehouseList}}</td>
+                    <td>{{product.stock}}</td>
+                    <td>{{product.TotalPurchase}}</td>
+                    <td>{{product.LastSalesDate}}</td>
+                    <td>{{product.LastPurchaseSupplier}}</td>
+                    <td>{{product.TotalSales}}</td>
+                    <td>{{product.LastSalesDate}}</td>
+                    <td>{{product.LastSalesCustomer}}</td>
+                    <td>{{product.ImagePath}}</td>
+                    <td>{{product.Type}}</td>
+                    <td>{{product.Status}}</td>
+                    
+
+
+                    
+                </tr>
+            </tbody>
+        </table>
+    <p *ngIf="!products || products.length<= 0">No Products found</p>
+</div>
+
